@@ -1,72 +1,30 @@
-<!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    
-      <title></title>
-    
-    <link rel="shortcut icon" type="image/x-icon" href="http://www.datacarpentry.org/2016-01-19-sbu//favicon.ico">
-<link href="install_files/bootstrap.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="install_files/bootstrap-responsive.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="install_files/swc.css">
-<link rel="stylesheet" type="text/css" href="install_files/swc-bootstrap.css">
-<meta charset="UTF-8">
-<meta http-equiv="last-modified" content="">
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-    <meta name="venue" content="">
-    <meta name="date" content="">
-    <meta name="startdate" content="">
-    <meta name="enddate" content="">
-  </head>
-  <body>
-    <div class="container">
-      <div class="span10 offset1">
-        <div class="banner">
-  <a href="http://datacarpentry.org/" title="Data Carpentry">
-    <img alt="Data Carpentry banner" src="install_files/DC1_logo_small.png" height="50px">
-  </a>
-</div>
-
-
-        <div class="hero-unit">
-          <div class="row-fluid">
-            <div class="span10">
-	      <h3>Data Carpentry Workshop Setup Instructions</h3>
-<!--	      <h4>Organized by  </h4> -->
-              <h3></h3>
-	    </div>
-          </div>
-        </div>
-
-        <!--
+---
+layout: setup
+root: .
+assistant: []
+contact: admin@datacarpentry.org
+---
+<!--
     Edit the values in the parameter block above to be appropriate for your bootcamp.
     Please use three-letter month names for the 'humandate' field.
 -->
 
 <p>
   <strong>Requirements:</strong>
-Data Carpentry's teaching is hands-on, so participants are encouraged to
- bring in and use their own laptops to insure the proper setup of tools 
-for an efficient workflow once you leave the workshop.  (We will provide
- instructions on setting up the required software several days in 
-advance)
+Data Carpentry's teaching is hands-on, so participants are encouraged to bring in and use their own laptops to insure the proper setup of tools for an efficient workflow once you leave the workshop.  (We will provide instructions on setting up the required software several days in advance)
 <em> There are no pre-requisites, and we will assume no prior knowledge about the tools.</em> 
 </p>
 
 
   <strong>Contact</strong>:
   Please email
-  
-    <a href="mailto:admin@datacarpentry.org">admin@datacarpentry.org</a>
-  
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
   for questions and information not covered here.
-<p></p>
-
-
+</p>
 
 
 <h2>Setup</h2>
